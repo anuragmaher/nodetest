@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="js/mosaic.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mosaic.css">
+    <link rel="stylesheet" type="text/css" href="css/pure-min.css">
+    <title>Photo Mosaic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <!-- Edit me. -->
+    <h1 class="center-align bigfont">Photo mosaic App</h1>
+    <div id="target">Drop Images here </div> 
+    <div class="button-wrapper">
+      <div class="fileUpload pure-button button-success">
+        <span> <img style="margin-right: 9px;" src="http://www.iconsdb.com/icons/preview/white/upload-2-xxl.png" width="13px;"> Upload images </span>
+        <input type="file" accept="image/*" class="upload" multiple id="fileUpload"/>
+      </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+        <div class="divborder imageWrapper" id="sourceImages">
+          <h1 class="picsHeading">Source Images</h1>
+          <div class="faddedText"> Add Images </div>
+        </div>
+        </div>
+        <div class="pure-u-2-3">
+          <div class="divborder imageWrapper" id="mosaicImage">
+            <h1 class="picsHeading">Photo Mosiac </h1> <span class="faddedText hidden" id="imageClickInfo"> Click on the image to generate Photo Mosaic </span>
+            <div id="mosaicCanvas">
+              
+
+            </div>
+          </div>
+        </div>
+    </div>
+    <!--
+    <div class="button-wrapper"><button type="button" value="Begin" id="beginProcess" class="pure-button pure-button-primary"> Generate Photo Mosaic </button></div>
+    -->
+    <div class="button-wrapper"><div id="imagenotfound" class="hidden pure-button"> Please drop a Image. </div></div>
+    <div><button id="btn-download" class="pure-button-secondary pure-button" style="display:none;">Download</button></div>
+    <div class="imageWrapper">
+    </div>
+    <div class="hidden" id="loadingInfo" style="cursor:pointer;">
+      <p> Photo Mosaic creation <span id="percentageComplete">0</span> % Done. </p>
+    </div>
+    <div class="imageWrapper">
+    </div>
+    <br/>
+    <br/>
+  </body>
+  <script src="js/utils.js"></script>
+  <script src="js/httprequest.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/mosaicCollection.js"></script>
+  <script src="js/pool.js"></script>
+  <script src="js/imagePainter.js"></script>
+  <script src="js/client.js"></script>
+  <script src="lib/alertify.js"></script>
+
+  
+  <!--
+  <footer>
+      <div class="crafted"> Crafted  with &#9829; by Anurag Maherchandani </div>
+  </footer>
+  -->
+</html>
